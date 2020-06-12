@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 
 import GlobalStyle from './styles/global';
-//stateless
-const App = () => ( //sempre  com parênteses
-  <Fragment>
+
+import Main from './pages/Main/index';
+
+const App = () => <Fragment>
     <GlobalStyle />
-    <div className="App" />
-  </Fragment>
-);
+    <Main />
+   </Fragment>;
 
 export default App;
