@@ -16,10 +16,13 @@ export default class Main extends Component {
     repositoryInput: '',
     repositoryError: false,
     repositories: [],
+    loading: false
   };
 
   handleAddRepository = async (e) => {
     e.preventDefault(); // tira o carregamento padrão da pagina
+
+    this.setState({ loading: true});
 
     try {
       const { data: repository } = await api.get(`/repos/${this.state.repositoryInput}`);
@@ -33,6 +36,8 @@ export default class Main extends Component {
       })
     } catch (e) {
       this.setState({repositoryError: true});
+    }finally{
+      this.setState({ loading: false});
     }
 }
 
@@ -41,12 +46,15 @@ export default class Main extends Component {
       <Container>
         <img src={logo} alt="Github Compare" />
 
+
         <Form withError={this.state.repositoryError} onSubmit={this.handleAddRepository}>
           <input type="text" placeholder="usuário/repositório"
             value={this.state.repositoryInput}
             onChange={e => this.setState({repositoryInput: e.target.value})}
           />
-          <button type="submit">OK</button>
+          <button type="submit">
+            {this.state.loading ? <i className="fa fa-spinner fa-pulse"/> : 'OK' }
+          </button>
         </Form>
 
         <CompareList repositories={this.state.repositories}/>
