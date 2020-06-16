@@ -2,10 +2,14 @@
 
  export const Container = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-flow: row wrap;
+  /* flex-direction: row !important; */
+  justify-content: start;
 
+  align-items: center;
   margin-top: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
  `;
 
  export const Repository = styled.div`
@@ -13,7 +17,7 @@
   background: #FFF;
   border-radius: 3px;
 
-  margin: 0 10px;
+  margin: 0px 10px 20px;
 
   display: flex;
   flex-direction: column;

@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import api from '../../services/api';
 import moment from 'moment';
 
 import logo from '../../assets/logo.png';
 
-import { Container, Form, ListItems } from './styles';
+import { Container, Form, ListItems, Search } from './styles';
 
 import CompareList from '../../Components/CompareList';
 
@@ -94,7 +94,6 @@ export default class Main extends Component {
     } = this.state;
 
     return (
-    <Fragment>
       <Container>
             <img src={logo} alt="Github Compare" />
             {/* verificando se existe algum erro no formulário para dar um aviso withError */}
@@ -109,15 +108,14 @@ export default class Main extends Component {
                 {this.state.loading ? <i className="fa fa-spinner fa-pulse"/> : 'OK' }
               </button>
             </Form>
-      </Container>
-      <ListItems>
-        <CompareList
-            repositories={repositories}
-            removeRepository={this.handleRemoveRepository}
-            updateRepository={this.handleUpdateRepository}
-        />
-      </ListItems>
-    </Fragment>
+
+            <CompareList
+                repositories={repositories}
+                removeRepository={this.handleRemoveRepository}
+                updateRepository={this.handleUpdateRepository}
+            />
+
+    </Container>
     );
   }
 }
