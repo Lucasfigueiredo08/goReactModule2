@@ -24,9 +24,9 @@
       flex-direction: column;
       align-items: center;
 
-          img {
+        img {
           width: 64px;
-          }
+        }
 
         strong {
           font-size: 24px;
