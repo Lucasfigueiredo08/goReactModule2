@@ -5,7 +5,7 @@ import { Container, Repository } from './styles';
 
 // const repositories = props.repositories;
 
-const CompareList = ({ repositories }) => (
+const CompareList = ({ repositories, removeRepository, updateRepository }) => (
   <Container>
     {repositories.map(repository => (
       // id de cada repositorio
@@ -36,9 +36,18 @@ const CompareList = ({ repositories }) => (
               { repository.lastCommit }<small>last commit</small>
             </li>
           </ul>
+          <div className="buttons-container">
+          <button type="button" onClick={() => updateRepository(repository.id)}>
+            <i className="fa fa-retweet" />
+            Atualizar
+          </button>
+          <button type="button" onClick={() => removeRepository(repository.id)}>
+            <i className="fa fa-trash" />
+            Excluir
+          </button>
+        </div>
       </Repository>
     ))}
-
   </Container>
 );
 
@@ -54,8 +63,10 @@ CompareList.propTypes = {
     forks_count: PropTypes.number,
     open_issues_count: PropTypes.number,
     pushed_at: PropTypes.string,
-  })).isRequired,
-
+  }),
+  ).isRequired,
+  removeRepository: PropTypes.func.isRequired,
+  updateRepository: PropTypes.func.isRequired,
 }
 
 export default CompareList;

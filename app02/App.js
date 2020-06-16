@@ -7,7 +7,6 @@ import Main from './pages/Main/index';
 const App = () => <Fragment>
     <GlobalStyle />
     <Main />
-    {/* </Pesquisa> */}
    </Fragment>;
 
 export default App;

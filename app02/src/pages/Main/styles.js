@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
+`;
+
+export const ListItems = styled.div`
+
 `;
 
 export const Form = styled.form`
@@ -22,19 +25,18 @@ export const Form = styled.form`
     font-size: 18px;
     color: #444;
     border-radius: 3px;
-
+ /* mudança na caixa de pesquisa, caso tenha um error altera para '2px solid #f00 */
     border: ${props => props.withError ? '2px solid #F00' : 0};
   }
 
   button {
-    width: 80px;
     height: 55px;
     padding: 0 20px;
     margin-left: 10px;
     background: #63f5b0;
     color:#FFF;
     border: 0;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 3px;
 

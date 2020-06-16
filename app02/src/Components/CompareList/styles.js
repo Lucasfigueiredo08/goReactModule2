@@ -61,7 +61,42 @@
       }
     }
 
+    div.buttons-container {
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-around;
 
+      button {
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+
+        i{
+          margin-right: 3px;
+        }
+
+        &:nth-children(2n) {
+          border: 1px solid #c11927;
+          color: #c11927;
+
+          &:hover {
+            background: #aa1622;
+            color: #FFF;
+          }
+        }
+
+        &:nth-children(2n - 1) {
+          border: 1px solid #116088;
+          color: #116088;
+
+          &:hover {
+            background: #0e5071;
+            color: #FFF;
+          }
+        }
+      }
+    }
  `;
 
 
