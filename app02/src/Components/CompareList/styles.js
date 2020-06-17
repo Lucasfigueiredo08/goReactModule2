@@ -80,7 +80,7 @@
           margin-right: 3px;
         }
 
-        &:nth-children(2n) {
+        &:nth-child(2n) {
           border: 1px solid #c11927;
           color: #c11927;
 
@@ -90,7 +90,7 @@
           }
         }
 
-        &:nth-children(2n - 1) {
+        &:nth-child(2n - 1) {
           border: 1px solid #116088;
           color: #116088;
 
