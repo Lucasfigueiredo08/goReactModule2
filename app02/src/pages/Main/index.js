@@ -4,7 +4,7 @@ import moment from 'moment';
 
 import logo from '../../assets/logo.png';
 
-import { Container, Form, ListItems, Search } from './styles';
+import { Container, Form } from './styles';
 
 import CompareList from '../../Components/CompareList';
 
@@ -120,22 +120,3 @@ export default class Main extends Component {
   }
 }
 
-
-
-//stateless
-// const Main = () => (
-//   <Container>
-//     <img src={logo} alt="Github Compare" />
-
-//     <Form>
-//       <input type="text" placeholder="usuário/repositório" />
-//       <button type="submit">OK</button>
-//     </Form>
-
-//     <CompareList />
-//   </Container>
-
-
-// );
-
-// export default Main;

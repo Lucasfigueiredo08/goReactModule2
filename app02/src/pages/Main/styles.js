@@ -5,22 +5,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
-
-`;
-
-export const Search = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const ListItems = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 500px;
-  height: 400px;
-  align-content: space-between;
 `;
 
 export const Form = styled.form`
